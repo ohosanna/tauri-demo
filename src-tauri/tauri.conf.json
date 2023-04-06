@@ -15,7 +15,18 @@
       "all": false,
       "shell": {
         "all": false,
-        "open": true
+        "open": true,
+        "sidecar": true,
+        "scope": [
+          {
+            "name": "binaries/hello",
+            "sidecar": true,
+            "args": [
+              "-u",
+              { "validator": "\\S+" }
+            ]
+          }
+        ]
       }
     },
     "bundle": {
@@ -26,6 +37,9 @@
         "icons/128x128@2x.png",
         "icons/icon.icns",
         "icons/icon.ico"
+      ],
+      "externalBin": [
+        "binaries/hello"
       ],
       "identifier": "com.tauri.dev",
       "targets": "all"
